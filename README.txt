@@ -1,0 +1,1 @@
+Replace session-admin.js in the repo, then paste ADMIN-CSS-PATCH.txt into the <style> block in admin.html. Each session will get a Generate Senarai button that opens a printable list and Save PDF dialog.
