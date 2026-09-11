@@ -1,0 +1,1 @@
+Logo assets for SUKNA Lucky Draw portal.
