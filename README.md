@@ -1,2 +1,2 @@
-# lucky-draw
-SUKNA21 Lucky Draw Portal
+# SUKNA-Lucky-Draw
+SUKNA Lucky Draw
