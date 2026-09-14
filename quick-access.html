@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quick Access | SUKNA Lucky Draw 2026</title>
+<style>
+:root{--gold:#ffd75a;--red:#e61b2b;--text:#fff;--muted:#bdbdbd}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:radial-gradient(circle at 20% 10%,#4a0b10 0,transparent 32%),radial-gradient(circle at 85% 20%,#5a4500 0,transparent 28%),linear-gradient(145deg,#050505,#111 60%,#080808);display:flex;align-items:center;justify-content:center;padding:28px}
+.wrap{width:min(980px,100%)}
+.header{text-align:center;margin-bottom:26px}
+.logo{width:min(220px,55vw);max-height:120px;object-fit:contain;margin-bottom:14px}
+.kicker{color:var(--gold);font-weight:900;letter-spacing:.22em;font-size:13px}
+h1{margin:8px 0 6px;font-size:clamp(30px,5vw,58px);line-height:1}
+.sub{color:var(--muted);font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{text-decoration:none;color:#fff;background:linear-gradient(180deg,#1a1a1a,#101010);border:1px solid #ffffff18;border-radius:22px;padding:26px 20px;min-height:210px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 16px 40px #0008;transition:.18s ease}
+.card:hover{transform:translateY(-4px);border-color:#ffd75a88;box-shadow:0 20px 48px #000a,0 0 24px #ffd75a18}
+.icon{font-size:48px;margin-bottom:14px}
+.card h2{margin:0 0 9px;font-size:24px}
+.card p{margin:0;color:#aaa;line-height:1.45;font-size:14px}
+.card.register{border-top:4px solid var(--gold)}
+.card.admin{border-top:4px solid var(--red)}
+.card.display{border-top:4px solid #fff}
+.url{margin-top:12px;font-size:11px;color:#777;word-break:break-all}
+.repo{margin-top:18px;text-align:center}
+.repo a{display:inline-block;color:#ddd;text-decoration:none;border:1px solid #ffffff20;border-radius:999px;padding:10px 16px;font-size:13px}
+.footer{text-align:center;color:#666;margin-top:22px;font-size:12px}
+@media(max-width:760px){body{padding:18px}.grid{grid-template-columns:1fr}.card{min-height:160px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <img class="logo" src="./sukna-logo.svg" alt="Logo SUKNA">
+    <div class="kicker">SUKNA SELANGOR 2026</div>
+    <h1>Lucky Draw Quick Access</h1>
+    <div class="sub">Akses pantas untuk pendaftaran, urusan admin dan paparan pemenang.</div>
+  </div>
+
+  <div class="grid">
+    <a class="card register" href="./register.html">
+      <div class="icon">📝</div>
+      <h2>Pendaftaran Peserta</h2>
+      <p>Buka borang pendaftaran cabutan bertuah.</p>
+      <div class="url">register.html</div>
+    </a>
+
+    <a class="card admin" href="./admin.html">
+      <div class="icon">⚙️</div>
+      <h2>Admin Cabutan</h2>
+      <p>Urus peserta, sesi cabutan, pemenang dan grand prize.</p>
+      <div class="url">admin.html</div>
+    </a>
+
+    <a class="card display" href="./display.html" target="_blank">
+      <div class="icon">🏆</div>
+      <h2>Paparan Pemenang</h2>
+      <p>Buka paparan projector / skrin utama pemenang.</p>
+      <div class="url">display.html</div>
+    </a>
+  </div>
+
+  <div class="repo">
+    <a href="https://github.com/Sukna21/lucky-draw" target="_blank">GitHub Repository</a>
+  </div>
+
+  <div class="footer">SUKNA Lucky Draw 2026 • Quick Access</div>
+</div>
+</body>
+</html>
