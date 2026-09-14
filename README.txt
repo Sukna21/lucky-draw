@@ -1,13 +1,16 @@
 SUKNA Lucky Draw 2026
 
-UPDATE PAPARAN PEMENANG - 4 DIGIT NO. TELEFON
+UPDATE GENERATE SENARAI PEMENANG
 
-1. Extract ZIP ini.
-2. Upload display.js ke root repo Sukna21/lucky-draw.
-3. Replace display.js lama.
+Perubahan:
+- Senarai pemenang setiap sesi kini paparkan nombor telefon penuh.
+- Kolum: No., Nama Pemenang, Kontinjen, No. Telefon.
+- Paparan projector masih kekal nombor telefon masked 4 digit terakhir.
+
+Cara pasang:
+1. Extract ZIP.
+2. Upload session-admin.js ke root repo Sukna21/lucky-draw.
+3. Replace session-admin.js lama.
 4. Commit changes.
-5. Tunggu GitHub Pages selesai deploy.
-6. Refresh paparan projector (Ctrl+F5).
-
-Contoh paparan nombor telefon: xxxxxx5962
-Backend Supabase public_winners telah disediakan untuk hanya mendedahkan nombor yang dimask.
+5. Tunggu GitHub Pages deploy selesai.
+6. Refresh Admin (Ctrl+F5).

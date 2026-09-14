@@ -35,7 +35,7 @@ async function renderSessionManager(){
 
     const{data:rows,error}=await db
       .from('winners')
-      .select('position,draw_session,drawn_at,participants(full_name,contingent)')
+      .select('position,draw_session,drawn_at,participants(full_name,contingent,phone)')
       .eq('draw_session',s)
       .order('position',{ascending:true});
 
@@ -51,6 +51,7 @@ async function renderSessionManager(){
       no:i+1,
       name:x.participants?.full_name||'-',
       contingent:x.participants?.contingent||'-',
+      phone:x.participants?.phone||'-',
       drawn_at:x.drawn_at
     }));
 
@@ -78,15 +79,16 @@ async function renderSessionManager(){
 <style>
   *{box-sizing:border-box}
   body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f5f5f5;color:#111}
-  .page{width:min(900px,94vw);margin:24px auto;background:#fff;padding:34px 40px;border-radius:16px;box-shadow:0 10px 35px #0001}
+  .page{width:min(980px,94vw);margin:24px auto;background:#fff;padding:34px 40px;border-radius:16px;box-shadow:0 10px 35px #0001}
   .head{text-align:center;border-bottom:3px solid #d5a900;padding-bottom:18px;margin-bottom:22px}
   .head h1{margin:0;font-size:28px}
   .head h2{margin:8px 0 0;color:#9a7500;font-size:20px}
   .meta{display:flex;justify-content:space-between;gap:16px;margin-bottom:18px;font-size:13px;color:#555}
   table{width:100%;border-collapse:collapse}
-  th,td{border:1px solid #ddd;padding:12px;text-align:left}
+  th,td{border:1px solid #ddd;padding:11px;text-align:left}
   th{background:#161616;color:#ffd75a;font-size:12px;text-transform:uppercase}
-  td:first-child,th:first-child{width:65px;text-align:center}
+  td:first-child,th:first-child{width:58px;text-align:center}
+  td:nth-child(4),th:nth-child(4){white-space:nowrap}
   .foot{margin-top:22px;font-size:12px;color:#777;text-align:center}
   .printbar{text-align:center;margin:18px 0}
   button{padding:11px 18px;border:0;border-radius:10px;background:#111;color:#ffd75a;font-weight:800;cursor:pointer}
@@ -105,9 +107,9 @@ async function renderSessionManager(){
     <div><b>Masa Cabutan:</b> ${escHtml(dt)}</div>
   </div>
   <table>
-    <thead><tr><th>No.</th><th>Nama Pemenang</th><th>Kontinjen</th></tr></thead>
+    <thead><tr><th>No.</th><th>Nama Pemenang</th><th>Kontinjen</th><th>No. Telefon</th></tr></thead>
     <tbody>
-      ${list.map(x=>`<tr><td>${x.no}</td><td>${escHtml(x.name)}</td><td>${escHtml(x.contingent)}</td></tr>`).join('')}
+      ${list.map(x=>`<tr><td>${x.no}</td><td>${escHtml(x.name)}</td><td>${escHtml(x.contingent)}</td><td>${escHtml(x.phone)}</td></tr>`).join('')}
     </tbody>
   </table>
   <div class="foot">Dijana daripada Sistem Cabutan Bertuah SUKNA Selangor 2026</div>
